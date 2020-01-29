@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Form.css';
 
 const Form = ({ onSubmit, onChange, onClear }) => {
 
   return (
-    < >
-      <form onSubmit={onSubmit} id="wordForm">
+    <section className={styles.flex}>
+      <form onSubmit={onSubmit} id="wordForm" className={styles.Form}>
         <input type="text" placeholder="adjective" name="0" onChange={onChange} />
         <input type="text" placeholder="noun" name="1" onChange={onChange} />
         <input type="text" placeholder="verb, past tense" name="2" onChange={onChange} />
@@ -21,8 +22,8 @@ const Form = ({ onSubmit, onChange, onClear }) => {
         <button>Create Madlib</button>
       </form>
 
-      <button onClick={onClear}>Clear Form</button>
-    </>
+      <button onClick={onClear} className={styles.clear}>Clear Form</button>
+    </section>
   );
 };
 
