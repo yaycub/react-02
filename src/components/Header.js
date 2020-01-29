@@ -5,7 +5,7 @@ const Header = ({ title }) => {
   return (
     <header>
       <h1>{title}</h1>
-      <h2>a react madlib</h2>
+      <h4>a react madlib</h4>
     </header>
   );
 };
