@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Madlib from '../containers/Madlib';
 import Header from './Header';
+import Footer from './Footer';
 
 export default class App extends Component {
   
@@ -10,6 +11,7 @@ export default class App extends Component {
       < >
         <Header title="Madlibz" />
         <Madlib /> 
+        <Footer /> 
       </>
     );
   }
