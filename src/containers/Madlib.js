@@ -12,8 +12,6 @@ export default class Madlib extends Component{
 
   handleSubmit = () => {
     event.preventDefault();
-  
-    // this.setState({ words: [target[0].value, target[1].value, target[2].value, target[3].value, target[4].value, target[5].value, target[6].value, target[7].value, target[8].value, target[9].value, target[10].value, target[11].value] });
     this.toggleResult();
   }
 
@@ -21,16 +19,22 @@ export default class Madlib extends Component{
     this.setState({ [target.name]: target.value });
   }
 
+  handleClear = () => {
+    document.getElementById('wordForm').reset();
+  }
+
   render() {
     const { showResult } = this.state;
     const word = this.state;
+    
     let words = [];
     for(let i = 0; i < 13; i++){
       words.push(word[i]);
     }
+
     return (
       <>
-        {!showResult && <Form onSubmit={this.handleSubmit} onChange={this.handleChange} />}
+        {!showResult && <Form onSubmit={this.handleSubmit} onChange={this.handleChange} onClear={this.handleClear} />}
         {showResult && <Result words={words} closeResult={this.toggleResult} />}
       </>
     );
