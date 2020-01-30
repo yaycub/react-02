@@ -1,0 +1,20 @@
+.Header{
+  border-bottom: 5px solid black;
+  text-align: center;
+  width: 100%;
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+
+  h1{
+    color: indigo;
+    border-bottom: 2px solid lightgray;
+  }
+
+  h4{
+    color: lightgray;
+  }
+}

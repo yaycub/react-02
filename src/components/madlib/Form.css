@@ -1,0 +1,26 @@
+.Form{
+  width: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+
+  input{
+    height: 30px;
+    margin: 2px;
+    padding: 2px;
+  }
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clear{
+  color: lightgray;
+  margin: 5px;
+}
